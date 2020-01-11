@@ -68,7 +68,7 @@ class Dog
       WHERE name = ?
     SQL
     result = DB[:conn].execute(sql, name)[0]
-    Dog.new(result[0], result[1], result[2])
+    return result
   end
 
   def update
