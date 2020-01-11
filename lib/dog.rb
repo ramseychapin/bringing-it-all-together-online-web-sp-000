@@ -64,6 +64,11 @@ class Dog
      SQL
 
      given_dog = DB[:conn].execute(sql, name, breed)[0]
+     if given_dog
+
+    else
+
+    end
   end
 
   def self.find_by_name(name)
