@@ -72,7 +72,7 @@ class Dog
         :name => given_dog[1],
         :breed => given_dog[2]
       }
-      new_dog = self.create({:name => given_dog[1], :breed => given_dog[2]})
+      new_dog = self.create(attributes_hash)
     end
     return new_dog
   end
