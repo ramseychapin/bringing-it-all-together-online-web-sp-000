@@ -54,7 +54,7 @@ class Dog
     SELECT * FROM dogs WHERE id = ?
   SQL
   result = DB[:conn].execute(sql, id)[0]
-  Dog.new(result[0], result[1], result[2])
+  Dog.new(id: result[0],name: result[1],breed: result[2])
   end
 
   def self.find_or_create_by
@@ -68,7 +68,7 @@ class Dog
       WHERE name = ?
     SQL
     result = DB[:conn].execute(sql, name)[0]
-    return result
+    Dog.new(id: result[0],name: result[1],breed: result[2])
   end
 
   def update
