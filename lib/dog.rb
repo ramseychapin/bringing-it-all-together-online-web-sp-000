@@ -20,11 +20,7 @@ class Dog
 
   def self.drop_table
     sql =  <<-SQL
-      DROP TABLE dogs (
-        id INTEGER PRIMARY KEY,
-        name TEXT,
-        breed TEXT
-        )
+      DROP TABLE dogs;
         SQL
     DB[:conn].execute(sql)
   end
