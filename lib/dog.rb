@@ -64,6 +64,7 @@ class Dog
      SQL
 
      given_dog = DB[:conn].execute(sql, name, breed)[0]
+     binding.pry
      if given_dog
        new_dog = new_from_db(given_dog)
     else
