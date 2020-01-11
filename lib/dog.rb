@@ -71,7 +71,7 @@ class Dog
         :name => given_dog[1],
         :breed => given_dog[2]
       }
-      new_dog = self.create(:name = name)
+      new_dog = self.create(name: name, breed: breed)
       binding.pry
     end
     return new_dog
