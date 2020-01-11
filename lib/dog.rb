@@ -63,7 +63,7 @@ class Dog
      WHERE name = ? AND breed = ?
      SQL
 
-     given_dog = DB[:conn].execute(sql, name, breed).first.flatten
+     given_dog = DB[:conn].execute(sql, name, breed)[0]
 
      if given_dog
        new_dog = Dog.new(id: given_dog[0], name: given_dog[1], breed: given_dog[2])
