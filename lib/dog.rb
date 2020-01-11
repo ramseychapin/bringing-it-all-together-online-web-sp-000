@@ -70,6 +70,7 @@ class Dog
     else
       new_dog = self.create(id: given_dog[0], name: given_dog[1], breed: given_dog[2])
     end
+    return new_dog
   end
 
   def self.find_by_name(name)
