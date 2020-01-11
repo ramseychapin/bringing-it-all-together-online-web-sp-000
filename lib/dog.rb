@@ -46,7 +46,7 @@ class Dog
   end
 
   def self.new_from_db(row)
-    return dog.new(row)
+    return Dog.new(row)
   end
 
   def self.find_by_id
