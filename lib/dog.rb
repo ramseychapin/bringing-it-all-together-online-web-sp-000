@@ -51,7 +51,7 @@ class Dog
       :name => row[1],
       :breed => row[2]
     }
-    return Dog.new(row)
+    return Dog.new(attributes)
   end
 
   def self.find_by_id
