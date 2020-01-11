@@ -68,6 +68,7 @@ class Dog
       WHERE name = ?
     SQL
     result = DB[:conn].execute(sql, name)[0]
+    
   end
 
   def update
